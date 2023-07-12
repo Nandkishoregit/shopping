@@ -39,7 +39,8 @@
   },
   {
     "id": "aa070451-15e7-4bf6-9b28-29a77d48ee64",
-    "name": "hat",
+    "itemCode": "5555",
+    "name": "kiwi",
     "ammountAvailable": 2000,
     "price": 15,
     "promotion": false,
@@ -47,7 +48,8 @@
   },
   {
     "id": "ae65cec-4d9d-96dd-84122-b755f2gte71y",
-    "name": "BigApple",
+    "itemCode": "6666",
+    "name": "dougnuts",
     "ammountAvailable": 500,
     "price": 5,
     "promotion": true,
@@ -59,7 +61,6 @@
     "id": "ae670cec-4d9d-49dd-8432-b552f2ffe73u",
     "name": "BigMacSafe",
     "ammountAvailable": 500,
-
     "price": 10,
     "promotion": true,
     "promotionId": "ae670cec-4d9d-49dd-8472-b552f2ffe73e",
