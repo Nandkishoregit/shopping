@@ -11,19 +11,22 @@ function checkAndAplyPromotion(req, res, next) {
     const query = req.query;
     let product = res.locals.product
 
-    if(!product){
-      throw {error: `product ${query.name} not available`}
+    if (!product) {
+      throw { error: `product ${product.name} not available` }
     }
+    query.price = product.price
+    query.name = product.name
     if (!product?.promotion) {
       next();
     } else {
       let promo = promotion.filter(function (element) {
         return element.id === product.promotionId;
       });
-      
-      query.price = product.price
+
+
       if (promo[0].rule == "date") {
-        return res.send(dateRule(promo[0], query, product, promo[0]));
+        const data = dateRule(promo[0], query, product, promo[0])
+        return res.send(data);
       }
       if (promo[0].rule == "more then & date") {
         return res.send(moreDate(promo[0], query, product, promo[0]));
